@@ -29,7 +29,7 @@ end
 def destroy
   if session[:name] != nil
   session.delete :username
-end 
+end
   redirect_to :action => "login"
 end
 
