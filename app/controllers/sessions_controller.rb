@@ -16,7 +16,7 @@ end
 def create
   #byebug
   if params[:name] == nil || params[:name] == ""
-    redirect_to ontroller: 'sessions', action: 'new'
+    redirect_to controller: 'sessions', action: 'new'
 else
   redirect_to controller: "sessions", action: "welcome"
 end
