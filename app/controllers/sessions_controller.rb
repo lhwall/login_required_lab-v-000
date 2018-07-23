@@ -14,17 +14,24 @@ def login
 end
 
 def create
-  if :name == nil || :name == ""
-    redirect_to ontroller: 'sessions', action: 'new'
-  end
+  #byebug
+  if params[:name] == nil || params[:name] == ""
+    redirect_to controller: 'sessions', action: 'new'
 else
-  redirect_to controller: "sessions", action: "welcome"
+  session[:name] = params[:name]
+  redirect_to controller: "sessions", action: "new"
+end
 end
 
 def welome
 end
 
-
+def destroy
+  if session[:name] != nil
+  session.delete :name
+end
+  redirect_to :action => "new"
+end
 
 
 end
