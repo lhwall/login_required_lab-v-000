@@ -30,7 +30,7 @@ def destroy
   if session[:name] != nil
   session.delete :name
 end
-  redirect_to :action => "ew"
+  redirect_to :action => "new"
 end
 
 
