@@ -28,6 +28,7 @@ end
 
 def destroy
   session.delete :username
+  redirect_to :action => "login"
 end
 
 
