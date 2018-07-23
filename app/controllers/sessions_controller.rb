@@ -15,7 +15,7 @@ end
 
 def create
   byebug
-  if :name == nil || :name == ""
+  if params[:name] == nil || params[:name] == ""
     redirect_to ontroller: 'sessions', action: 'new'
   end
 else
