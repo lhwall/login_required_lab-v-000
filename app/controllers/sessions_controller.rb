@@ -14,7 +14,7 @@ def login
 end
 
 def create
-  byebug
+  #byebug
   if params[:name] == nil || params[:name] == ""
     redirect_to ontroller: 'sessions', action: 'new'
   end
