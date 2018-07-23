@@ -5,7 +5,7 @@ root "sessions#new"
 get "/welcome" => "sessions#welcome"
 get "/secrets" => "secrets#show"
 resources :sessions
-post "/destroy" => "sessions#destroy"
+post "/logout" => "sessions#destroy"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
