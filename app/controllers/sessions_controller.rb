@@ -1,0 +1,30 @@
+class SessionsController < ApplicationController
+
+def new
+end
+
+def login
+  if params[:name]
+    session[:name] = params[:name]
+    redirect_to controller: 'session', action: 'welcome'
+
+  else
+    redirect_to controller: 'sessions', action: 'login'
+  end
+end
+
+def create
+  if :name == nil || :name == ""
+    redirect_to ontroller: 'sessions', action: 'new'
+  end
+else
+  redirect_to controller: "sessions", action: "welcome"
+end
+
+def welome
+end
+
+
+
+
+end
