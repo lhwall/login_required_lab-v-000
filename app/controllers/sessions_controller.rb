@@ -14,6 +14,7 @@ def login
 end
 
 def create
+  byebug
   if :name == nil || :name == ""
     redirect_to ontroller: 'sessions', action: 'new'
   end
